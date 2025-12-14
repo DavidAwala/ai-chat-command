@@ -1,5 +1,5 @@
 import { useState, KeyboardEvent } from 'react';
-import { Send, Paperclip, Smile } from 'lucide-react';
+import { Send, Paperclip } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
@@ -48,9 +48,6 @@ export const MessageInput = ({ onSend, disabled }: MessageInputProps) => {
         <button className="p-2 text-muted-foreground hover:text-foreground transition-colors">
           <Paperclip className="w-5 h-5" />
         </button>
-        <button className="p-2 text-muted-foreground hover:text-foreground transition-colors">
-          <Smile className="w-5 h-5" />
-        </button>
         
         <div className="flex-1">
           <Textarea
@@ -58,7 +55,7 @@ export const MessageInput = ({ onSend, disabled }: MessageInputProps) => {
             onChange={(e) => setText(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder="Type a message..."
-            className="min-h-[44px] max-h-32 resize-none border-0 bg-muted focus-visible:ring-1 focus-visible:ring-primary"
+            className="min-h-[40px] max-h-30 resize-none border-0 bg-muted focus-visible:ring-1 scrollbar-thin focus-visible:ring-primary"
             rows={1}
             disabled={disabled}
           />
@@ -74,7 +71,7 @@ export const MessageInput = ({ onSend, disabled }: MessageInputProps) => {
         </Button>
       </div>
 
-      <p className="text-xs text-muted-foreground text-center">
+      <p className="text-xs text-muted-foreground text-center hidden lg:block">
         Press <kbd className="px-1.5 py-0.5 bg-muted rounded text-foreground font-mono">Enter</kbd> to send, 
         <kbd className="px-1.5 py-0.5 bg-muted rounded text-foreground font-mono ml-1">Shift+Enter</kbd> for new line
       </p>

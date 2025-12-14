@@ -14,7 +14,7 @@ const Chat = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="flex-1 flex h-[calc(100vh-80px)] md:h-screen overflow-hidden"
+        className="flex h-[calc(100vh-80px)] md:h-screen overflow-hidden"
       >
         {/* Chat List - Hidden on mobile when chat is open */}
         <div className={`${showChat ? 'hidden' : 'flex'} md:flex w-full md:w-80 lg:w-96 shrink-0`}>

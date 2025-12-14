@@ -15,7 +15,7 @@ interface ThemeState {
 }
 
 const defaultSettings: ThemeSettings = {
-  businessName: 'TechStore Pro',
+  businessName: 'Amaka',
   botName: 'Aria',
   primaryColor: '#0D9488',
   accentColor: '#F59E0B',

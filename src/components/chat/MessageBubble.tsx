@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Check, CheckCheck, Bot, ShieldCheck } from 'lucide-react';
+import { Check, CheckCheck, Bot, ShieldCheck, User } from 'lucide-react';
 import { Message } from '@/mock/messages';
 import { cn } from '@/lib/utils';
 import dayjs from 'dayjs';
@@ -53,19 +53,19 @@ export const MessageBubble = ({ message }: MessageBubbleProps) => {
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.2 }}
       className={cn(
-        'flex items-end gap-2 max-w-[80%]',
-        isCustomer ? 'self-start' : 'self-end flex-row-reverse'
+        'flex gap-2 mb-3',
+        isCustomer ?  "justify-start" : "justify-end"
       )}
     >
       {isCustomer && (
         <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center shrink-0 mb-1">
-          <span className="text-xs font-bold text-muted-foreground">C</span>
+          <span className="text-xs font-bold text-muted-foreground"><User size={16} className="text-black" /></span>
         </div>
       )}
-      
+      <div className={cn("max-w-[70%]", isCustomer ? "order-1" : "order-0")}>
       <div
         className={cn(
-          'rounded-2xl px-4 py-3 shadow-sm',
+          'rounded-2xl px-4 py-3 shadow-sm w-fit',
           isCustomer
             ? 'bg-chat-customer text-foreground rounded-bl-md'
             : isBot
@@ -73,6 +73,7 @@ export const MessageBubble = ({ message }: MessageBubbleProps) => {
             : 'bg-chat-admin text-primary-foreground rounded-br-md'
         )}
       >
+       
         {!isCustomer && (
           <div className="flex items-center gap-2 mb-1">
             {getSenderIcon()}
@@ -92,7 +93,10 @@ export const MessageBubble = ({ message }: MessageBubbleProps) => {
           )}>
             {dayjs(message.timestamp).format('h:mm A')}
           </span>
-          {getStatusIcon()}
+           {getStatusIcon()}
+          </div>
+          
+
         </div>
       </div>
     </motion.div>

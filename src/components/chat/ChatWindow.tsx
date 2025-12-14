@@ -65,9 +65,9 @@ export const ChatWindow = ({ onBack }: ChatWindowProps) => {
   };
 
   return (
-    <div className="flex-1 flex flex-col h-full">
+    <div className="flex-1 flex flex-col h-[100%] w-80">
       {/* Header */}
-      <div className="bg-card border-b border-border px-4 py-3">
+      <div className="bg-card border-b border-border px-1 dark:bg-slate-900 md:px-4 py-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             {onBack && (
@@ -90,7 +90,7 @@ export const ChatWindow = ({ onBack }: ChatWindowProps) => {
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h3 className="font-semibold text-foreground">{activeCustomer.name}</h3>
+                <h3 className="font-semibold text-foreground">{window.innerWidth <= 640 ? activeCustomer.name.slice(0, 7)+'...' :activeCustomer.name}</h3>
                 <span className={cn('text-xs px-2 py-0.5 rounded-full capitalize', getTagColor(activeCustomer.tag))}>
                   {activeCustomer.tag.replace('-', ' ')}
                 </span>
@@ -100,20 +100,9 @@ export const ChatWindow = ({ onBack }: ChatWindowProps) => {
               </p>
             </div>
           </div>
-
+                  
           <div className="flex items-center gap-2">
             <BotToggle />
-            <div className="hidden sm:flex items-center gap-1 ml-2">
-              <Button variant="ghost" size="icon">
-                <Phone className="w-5 h-5" />
-              </Button>
-              <Button variant="ghost" size="icon">
-                <Video className="w-5 h-5" />
-              </Button>
-              <Button variant="ghost" size="icon">
-                <MoreVertical className="w-5 h-5" />
-              </Button>
-            </div>
           </div>
         </div>
       </div>

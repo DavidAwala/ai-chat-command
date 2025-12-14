@@ -44,7 +44,7 @@ const Catalog = () => {
           </div>
         </div>
 
-        <div className="p-6 space-y-6">
+        <div className="p-6 space-y-6  overflow-y-auto h-[calc(100vh-96px)] scrollbar-thin">
           {/* Filters */}
           <div className="flex flex-col sm:flex-row gap-4">
             <div className="relative flex-1 max-w-md">

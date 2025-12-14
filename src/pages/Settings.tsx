@@ -18,6 +18,7 @@ import { Switch } from '@/components/ui/switch';
 import { useThemeStore } from '@/store/themeStore';
 import { useAuthStore } from '@/store/authStore';
 import { useToast } from '@/hooks/use-toast';
+import ThemeToggle from "@/components/ThemeToggle";
 
 const Settings = () => {
   const { settings, updateSettings } = useThemeStore();
@@ -82,14 +83,29 @@ const Settings = () => {
     <DashboardLayout>
       <div className="flex-1 overflow-y-auto">
         {/* Header */}
-        <div className="bg-card border-b border-border px-6 py-4">
+        <div className="bg-card flex items-center gap-4 sm:gap-1 flex-col sm:flex-row justify-between border-b border-border px-6 py-4">
+          <div>
           <h1 className="text-2xl font-bold text-foreground">Settings</h1>
           <p className="text-sm text-muted-foreground mt-1">
             Manage your preferences and configurations
           </p>
+          </div>
+           <ThemeToggle />
+               {/* Save Button */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            className="flex justify-end"
+          >
+            <Button onClick={handleSave} className="gap-2">
+              <Save className="w-4 h-4" />
+              Save Changes
+            </Button>
+          </motion.div>
         </div>
 
-        <div className="p-6 max-w-4xl space-y-6">
+        <div className="p-6 max-w-4xl space-y-6  overflow-y-auto h-[calc(100vh-96px)] scrollbar-thin">
           {/* Profile Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -306,18 +322,7 @@ const Settings = () => {
             </Card>
           </motion.div>
 
-          {/* Save Button */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="flex justify-end"
-          >
-            <Button onClick={handleSave} className="gap-2">
-              <Save className="w-4 h-4" />
-              Save Changes
-            </Button>
-          </motion.div>
+      
         </div>
       </div>
     </DashboardLayout>

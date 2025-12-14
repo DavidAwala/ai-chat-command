@@ -45,7 +45,7 @@ const Login = () => {
             <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center">
               <MessageSquare className="w-6 h-6 text-primary-foreground" />
             </div>
-            <span className="text-2xl font-bold text-sidebar-foreground">BizChat AI</span>
+            <span className="text-2xl font-bold text-sidebar-foreground">Amaka</span>
           </div>
         </div>
 

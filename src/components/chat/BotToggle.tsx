@@ -25,12 +25,12 @@ export const BotToggle = () => {
         {isBotActive ? <Bot className="w-4 h-4" /> : <User className="w-4 h-4" />}
       </div>
       
-      <div className="flex flex-col">
+      <div className="hidden sm:block md:hidden lg:block flex flex-col">
         <span className="text-sm font-medium">
           {isBotActive ? `${settings.botName} Active` : 'Manual Mode'}
         </span>
         <span className="text-xs text-muted-foreground">
-          {isBotActive ? 'Bot handling messages' : 'Admin in control'}
+          {isBotActive ? ' Bot handling messages' : ' Admin in control'}
         </span>
       </div>
 

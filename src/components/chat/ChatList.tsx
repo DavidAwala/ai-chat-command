@@ -46,9 +46,9 @@ export const ChatList = ({ onSelect }: ChatListProps) => {
   };
 
   return (
-    <div className="flex flex-col h-full bg-card border-r border-border">
+    <div className="flex w-full flex-col h-full bg-card border-r border-border">
       {/* Search */}
-      <div className="p-4 border-b border-border">
+      <div className="p-4 border-b border-border flex flex-col w-full md:w-80 lg:w-96">
         <div className="relative">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
           <Input
@@ -77,7 +77,7 @@ export const ChatList = ({ onSelect }: ChatListProps) => {
                 onSelect?.();
               }}
               className={cn(
-                'w-full flex items-start gap-3 p-4 text-left transition-colors border-b border-border/50',
+                'w-full md:w-80 lg:w-96 flex items-start gap-3 p-4 text-left transition-colors border-b border-border/50',
                 isActive
                   ? 'bg-primary/5 border-l-2 border-l-primary'
                   : 'hover:bg-muted/50'

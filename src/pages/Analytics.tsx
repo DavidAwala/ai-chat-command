@@ -81,7 +81,7 @@ const stats = [
 const Analytics = () => {
   return (
     <DashboardLayout>
-      <div className="flex-1 overflow-y-auto">
+      <div className="flex-1">
         {/* Header */}
         <div className="bg-card border-b border-border px-6 py-4">
           <h1 className="text-2xl font-bold text-foreground">Analytics Dashboard</h1>
@@ -90,7 +90,7 @@ const Analytics = () => {
           </p>
         </div>
 
-        <div className="p-6 space-y-6">
+        <div className="p-6 space-y-6 overflow-y-auto h-[calc(100vh-96px)] scrollbar-thin">
           {/* Stats Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {stats.map((stat, index) => (

@@ -188,11 +188,16 @@ export const conversations: Record<string, Message[]> = {
 };
 
 export const quickReplies = [
-  "Show me your catalog",
-  "What are your prices?",
-  "Talk to a human",
-  "Track my order",
-  "Return policy"
+  "hi how may i help you today?",
+  "Please hold while I check that for you.",
+  "Thank you for reaching out to us!",
+  "Is there anything else I can assist you with?",
+  "Welcome to our store! How can I assist you?",
+  "Can you provide more details?",
+  "I'd be happy to help with that.",
+  "Please hold while I check that for you.",
+  "Thank you for reaching out to us!",
+  "Is there anything else I can assist you with?",
 ];
 
 export const botResponses: Record<string, string> = {
