@@ -133,14 +133,14 @@ export const conversations: Record<string, Message[]> = {
   c3: [
     {
       id: uuidv4(),
-      text: "Hello! First time here. What do you sell?",
+      text: "Hello",
       sender: "customer",
       timestamp: new Date(Date.now() - 1000 * 60 * 10),
       status: "read"
     },
     {
       id: uuidv4(),
-      text: "Welcome to our store! 🎉 We offer premium electronics, accessories, and footwear. Would you like me to show you our catalog?",
+      text: "Hello, welcome to our store, I can help you with our Yellow Umbrellas, perfect for a rainy day, priced at $13.70 for the smaller one and $40.58 for the larger one. If you need something to power your devices, we also have Yellow AA Batteries available, starting at $40.51 for the large package.",
       sender: "bot",
       timestamp: new Date(Date.now() - 1000 * 60 * 9),
       status: "read"
@@ -149,23 +149,16 @@ export const conversations: Record<string, Message[]> = {
   c4: [
     {
       id: uuidv4(),
-      text: "Hi, I'd like to place a bulk order for my company",
+      text: "I want to by Umbrella",
       sender: "customer",
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 3),
       status: "read"
     },
     {
       id: uuidv4(),
-      text: "Hello Sofia! For bulk orders, I'll connect you with our business team who can offer special pricing and arrangements.",
+      text: "I'd be happy to help you find the perfect umbrella, we have a range of options available including the White Umbrella, Roll, which is a great choice for its compact size and affordability, priced at $17.74. Alternatively, if you're looking for something a bit more sturdy, our White Umbrella, Can, is available for $37.11, or if you prefer a smaller option, we have the White Umbrella, Small, starting at $72.11.",
       sender: "bot",
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 3 + 60000),
-      status: "read"
-    },
-    {
-      id: uuidv4(),
-      text: "Hi Sofia, this is Sarah from our business team. I'd be happy to assist with your bulk order. How many units are you looking at?",
-      sender: "admin",
-      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 2.5),
       status: "read"
     }
   ],
