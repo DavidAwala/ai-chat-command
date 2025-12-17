@@ -144,9 +144,7 @@ export const conversations: Record<string, Message[]> = {
       sender: "bot",
       timestamp: new Date(Date.now() - 1000 * 60 * 9),
       status: "read"
-    }
-  ],
-  c4: [
+    },
     {
       id: uuidv4(),
       text: "I want to by Umbrella",
@@ -162,7 +160,7 @@ export const conversations: Record<string, Message[]> = {
       status: "read"
     }
   ],
-  c5: [
+  c4: [
     {
       id: uuidv4(),
       text: "Thanks for the quick delivery!",
